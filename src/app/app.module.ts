@@ -14,10 +14,11 @@ import { RegisterComponent } from './register/register.component';
 import {ButtonModule} from 'primeng/button';
 import {CalendarModule} from 'primeng/calendar';
 import {CardModule} from 'primeng/card';
+import { HttpClientModule } from '@angular/common/http';
 import { StockComponent } from './stock/stock.component';
 
 const appRoutes: Routes = [
-  {path: '', component: AppComponent},
+  {path: '', component: HomeComponent},
   {path: 'home' , component: HomeComponent},
   {path: 'login' , component: LoginComponent},
   {path: 'register' , component: RegisterComponent},
@@ -33,7 +34,7 @@ const appRoutes: Routes = [
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    StockComponent
+    StockComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +44,8 @@ const appRoutes: Routes = [
     ButtonModule,
     CalendarModule,
     CardModule,
-    RouterModule.forRoot(appRoutes)
+    HttpClientModule,
+    RouterModule
     
   ],
   providers: [],
