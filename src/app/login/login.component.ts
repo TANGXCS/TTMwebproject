@@ -15,19 +15,18 @@ export class LoginComponent implements OnInit {
       password: ''
     });
   }
-
-
   // tslint:disable-next-line:typedef
   login(value) {
     console.log(value);
     const json = { username: value.username, password: value.password };
     console.log(json);
-    this.http.post('http://localhost/TTMservice/login', JSON.stringify(json))
+    this.http.post('http://localhost:82/TTMservice/login', JSON.stringify(json))
       .subscribe(response => {
         console.log('Success');
         if (response) {
           console.log('pass');
-          this.router.navigateByUrl('/member/' + value.username);
+          // this.router.navigateByUrl('/member/' + value.username);
+          this.router.navigate(['/homeAdmin']);
         }
         else {
           console.log('not pass');
