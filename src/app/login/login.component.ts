@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     console.log(value);
     const json = { username: value.username, password: value.password };
     console.log(json);
-    this.http.post('http://localhost:82/TTMservice/login', JSON.stringify(json))
+    this.http.post('http://localhost/TTMservice/login', JSON.stringify(json))
       .subscribe(response => {
         console.log('Success');
         if (response) {

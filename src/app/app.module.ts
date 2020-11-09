@@ -20,6 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HomeAdminComponent } from './homeAdmin/homeAdmin.component';
 import { AddEmployeesComponent } from './add-employees/add-employees.component';
 
+
+
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
@@ -51,7 +53,7 @@ const appRoutes: Routes = [
     CalendarModule,
     CardModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent]
