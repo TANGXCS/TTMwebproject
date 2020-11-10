@@ -15,10 +15,10 @@ import { CardModule } from 'primeng/card';
 import { HttpClientModule } from '@angular/common/http';
 import { StockComponent } from './stock/stock.component';
 import { FormsModule } from '@angular/forms';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeAdminComponent } from './homeAdmin/homeAdmin.component';
 import { AddEmployeesComponent } from './add-employees/add-employees.component';
+import { TableModule } from 'primeng/table';
 
 
 
@@ -27,8 +27,8 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'stock', component: StockComponent },
-  { path: 'homeAdmin', component: HomeAdminComponent},
-  { path: 'add-employees', component: AddEmployeesComponent}
+  { path: 'homeAdmin', component: HomeAdminComponent },
+  { path: 'add-employees', component: AddEmployeesComponent }
 ];
 
 @NgModule({
@@ -41,7 +41,7 @@ const appRoutes: Routes = [
     StockComponent,
     HomeAdminComponent,
     AddEmployeesComponent
-   ],
+  ],
   imports: [
     ReactiveFormsModule,
     FormsModule,
@@ -53,6 +53,8 @@ const appRoutes: Routes = [
     CalendarModule,
     CardModule,
     HttpClientModule,
+    CalendarModule,
+    TableModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [],
